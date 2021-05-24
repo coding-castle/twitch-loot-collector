@@ -1,4 +1,9 @@
 console.log("Loot Collector init");
+chrome.storage.sync.get("isEnabled", (data) => { 
+    if (data.isEnabled === undefined) {
+        chrome.storage.sync.set({ isEnabled: true });
+    }
+})
 const querySelector = 'button[aria-label="Claim Bonus"]';
 
 setInterval(() => {

@@ -1,3 +1,16 @@
+body {
+    min-width: 300px;
+}
+
+#switch-container {
+    display: flex;
+    align-items: center;
+}
+
+#switch-container div {
+    margin-right: 1rem;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
