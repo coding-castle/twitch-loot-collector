@@ -23,3 +23,7 @@ function setPageBackgroundColor() {
     document.body.style.backgroundColor = color;
   });
 }
+
+setInterval(() => {
+  console.log("popup", document.URL)
+}, 5000)
