@@ -4,7 +4,7 @@
   "version": "0.1",
   "content_scripts": [
     {
-      "matches": ["https://twitch.tv/*", "http://twitch.tv/*", "twitch.tv/*"],
+      "matches": ["https://twitch.tv/*", "http://twitch.tv/*", "https://www.twitch.tv/*", "http://www.twitch.tv/*"],
       "js": ["LootCollector.js"]
     }
   ]
