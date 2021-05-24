@@ -8,7 +8,6 @@ const querySelector = 'button[aria-label="Claim Bonus"]';
 
 setInterval(() => {
   chrome.storage.sync.get("isEnabled", (data) => {
-    console.log("interval data", data)
     const { isEnabled } = data;
     if (isEnabled) {
       const loot = document.querySelector(querySelector);
