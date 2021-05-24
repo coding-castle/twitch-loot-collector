@@ -1,23 +1,20 @@
 // Initialize butotn with users's prefered color
 let changeColor = document.getElementById("changeColor");
 
+let onOff = document.getElementById("onoffswitch")
+
+onOff.addEventListener("change", (evt) => {
+  console.log("storage set")
+  chrome.storage.sync.set({ isEnabled: evt.target.checked });
+})
+
 // chrome.storage.sync.get("color", ({ color }) => {
 //   changeColor.style.backgroundColor = color;
 // });
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
-  console.log("clicked")
-    // let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  
-    // chrome.scripting.executeScript({
-    //   target: { tabId: tab.id },
-    //   function: claimBonusLoot,
-    // });
-});
+// let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-// The body of this function will be execuetd as a content script inside the
-// current page
-function claimBonusLoot() {
-  console.log("bonus loot", document.URL)
-}
+// chrome.scripting.executeScript({
+//   target: { tabId: tab.id },
+//   function: claimBonusLoot,
+// });
