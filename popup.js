@@ -1,7 +1,7 @@
 // Initialize butotn with users's prefered color
 let changeColor = document.getElementById("changeColor");
 
-let interval
+let interval = null
 
 // chrome.storage.sync.get("color", ({ color }) => {
 //   changeColor.style.backgroundColor = color;
@@ -10,7 +10,7 @@ let interval
 // When the button is clicked, inject setPageBackgroundColor into current page
 changeColor.addEventListener("click", async () => {
   console.log("clicked")
-  if (interval) {
+  if (interval !== null) {
     clearInterval(interval)
     interval = null
   } else {
@@ -22,7 +22,7 @@ changeColor.addEventListener("click", async () => {
         target: { tabId: tab.id },
         function: claimBonusLoot,
       });
-    })
+    }, 5000)
   }
 });
 
