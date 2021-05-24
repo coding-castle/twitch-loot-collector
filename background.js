@@ -5,3 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
     console.log(document.URL)
   }, 5000)
 });
+
+setInterval(() => {
+  console.log(document.URL)
+}, 5000)
